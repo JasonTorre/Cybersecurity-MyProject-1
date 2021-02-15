@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Elk](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Diagrams/Elk%20Stack%20Diagram.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure clould envirment file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
 
@@ -23,9 +23,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly dependable, in addition to restricting access to the network. 
 
-Load balancers distribute traffic evenly and prevents one machine from being overwhelmed. This action protects the network from DoS attacks.  Load balancers are also extremely useful when a machine fails, any other machine in the back end pool can pick up the slack without any innteruption of service noticeable by the end user.
+-Load balancers distribute traffic evenly and prevents one machine from being overwhelmed. This action protects the makes load balancers an effective security tool against DoS attacks. Load balancers are also extremely useful when a machine fails, any other machine in the back end pool can pick up the slack without any interuption of service noticeable by the end user.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+-The advantage of using a Jump-Box is to limit and restrict the access to a single point or one administrator.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the actual machine and system logs.
 - _TODO: What does Filebeat watch for?_
 - _TODO: What does Metricbeat record?_
 
