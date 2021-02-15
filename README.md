@@ -34,29 +34,23 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-
-|          |   |   |   |
-|----------|---|---|---|
-| Jump Box |   |   |   |
-|          |   |   |   |
-|          |   |   |   |
-|          |   |   |   |
-
+| Name     | Function         | IP Address | Operating System |
+|----------|------------------|------------|------------------|
+| Jump-Box | Gateway          | 10.0.0.8   | Linux            |
+| Web-1    | DVWA Containers  | 10.0.0.9   | Linux            |
+| Web-2    | DVWA Containers  | 10.0.0.10  | Linux            |
+| Web-3    | DVWA Containers  | 10.0.0.11  | Linux            |
+| Elk      | Configuration VM | 10.1.0.5   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Machines within the network can only be accessed by _____.
+- 104.34.75.64 - My home IP address
+
+Machines within the network can only be accessed by through the DVWA container in the Jump Box VM.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
