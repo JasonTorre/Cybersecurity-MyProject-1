@@ -23,9 +23,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly dependable, in addition to restricting access to the network. 
 
--Load balancers distribute traffic evenly and prevents one machine from being overwhelmed. This action protects the makes load balancers an effective security tool against DoS attacks. Load balancers are also extremely useful when a machine fails, any other machine in the back end pool can pick up the slack without any interuption of service noticeable by the end user.
+- Load balancers distribute traffic evenly and prevents one machine from being overwhelmed. This action protects the makes load balancers an effective security tool against DoS attacks. Load balancers are also extremely useful when a machine fails, any other machine in the back end pool can pick up the slack without any interuption of service noticeable by the end user.
 
--The advantage of using a Jump-Box is to limit and restrict the access to a single point or one administrator.
+- The advantage of using a Jump-Box is to limit and restrict the access to a single point or one administrator.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the actual machine and system logs.
 - _TODO: What does Filebeat watch for?_
