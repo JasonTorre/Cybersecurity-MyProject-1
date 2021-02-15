@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![Elk](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Diagrams/Elk%20Stack%20Diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -21,10 +21,9 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly dependable, in addition to restricting access to the network. Load balancers distribute 
-traffic evenly and prevent one machine from being overwhelmed. They are also extremely useful when a machine fails, any other machine in the back end pool
-can pick up the slack.
+Load balancing ensures that the application will be highly dependable, in addition to restricting access to the network. 
 
+Load balancers distribute traffic evenly and prevents one machine from being overwhelmed. This action protects the network from DoS attacks.  Load balancers are also extremely useful when a machine fails, any other machine in the back end pool can pick up the slack without any innteruption of service noticeable by the end user.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
