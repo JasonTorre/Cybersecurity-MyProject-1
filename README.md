@@ -92,7 +92,8 @@ These Beats allow us to collect the following information from each machine:
 ![Filebeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/Filebeats.PNG)
 
 - Metricbeat collects metrics from the operating system and from services running on the server. The metrics and statistics that it collects and is sent to the output that you specify, such as Elasticsearch or Logstash and can be distplayed on a dashboard such as below.
-[Metricbeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/MetricBeat.PNG)
+
+![Metricbeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/MetricBeat.PNG)
 
 
 ### Using the Playbook
