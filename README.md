@@ -91,7 +91,7 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat monitors the log files of the choosen system, and forwards them to Elasticsearch or Logstash. The Data can then be viewed and it will represent data such as system log events in a dashboard:
 ![Filebeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/Filebeats.PNG)
 
-- Metricbeat collects metrics from the operating system and from services running on the server. The metrics and statistics that it collects and is sent to the output that you specify, such as Elasticsearch or Logstash and can be distplayed on a dashboard such as below.
+- Metricbeat collects metrics from the operating system and from services running on the server. The metrics and statistics that it collects and is sent to the output that you specify, such as Elasticsearch or Logstash and can be displayed on a dashboard in Kibana, such as below.
 
 ![Metricbeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/MetricBeat.PNG)
 
@@ -99,14 +99,13 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
+
 SSH into the control node and follow the steps below:
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Update the filebeat-config.yml file to include ELK-1 private IP 10.1.0.5 (Your IP vary) line 1106 and 1806.
+- Run the playbook, and navigate to [ELK public IP]/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
