@@ -150,7 +150,7 @@ Install, setup and launch docker using the commands below
 The command will create and start a conatianer. To find the name of your conatainer run the command below.
 - ```sudo docker container list -a```
 
-When you need to restart your conatianer you would use the following command below.
+When starting your conatianer you would use the following command below.
 - ``` sudo docker start (Name) && sudo docker attach (Name)```
 
 You would then need to edit the host files.
@@ -163,5 +163,45 @@ Then edit the config files.
  2. On line 106, change remote user to ```remote_user = [username]```
  
 Create the Playbook and Configure the Container.
+- ```touch pentest.yml```
+- ```nano pentest.yml```
+
+In the nano text editor add the following so the playbook reads:
+---
+- name: Config Web VM with Docker
+  hosts: webservers
+  become: true
+  tasks:
+  - name: docker.io
+    apt:
+      force_apt_get: yes
+      update_cache: yes
+      name: docker.io
+      state: present
+
+  - name: Install pip3
+    apt:
+      force_apt_get: yes
+      name: python3-pip
+      state: present
+
+  - name: Install Docker python module
+    pip:
+      name: docker
+      state: present
+
+  - name: download and launch a docker web container
+    docker_container:
+      name: dvwa
+      image: cyberxsecurity/dvwa
+      state: started
+      restart_policy: always
+      published_ports: 80:80
+
+  - name: Enable docker service
+    systemd:
+      name: docker
+      enabled: yes
+```
 
 
