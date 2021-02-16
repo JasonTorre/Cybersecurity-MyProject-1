@@ -139,5 +139,9 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to [ELK public IP]/app/kibana to check that the installation worked as expected.
 
 
+Below is he specific commands the user will need to run to download the playbook, update the files, etc.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- ssh into Jump-Box VM: ssh [username]@[IP_Address]
+
+Install, setup and launch docker using the commands below
+- ```sudo apt install docker.io```
