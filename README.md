@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - _TODO: Enter the playbook file._
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -32,7 +32,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function         | IP Address | Operating System |
 |----------|------------------|------------|------------------|
@@ -51,15 +50,17 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - 104.34.75.64 - My home IP address
 
 Machines within the network can only be accessed by through the DVWA container in the Jump Box VM.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- I allowed only my Jump-Box VM IP 10.0.0.8 using a DVWA Conatainer through a peering connetion and my home IP 104.34.75.64 permision to access The Elk Server. 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name        | Publicly Accessible | Allowed IP Addresses  |
+|---------- --|---------------------|-----------------------|
+| Jump-Box VM | Yes                 | 104.34.75.64          |
+| Web-1       | No                  | 10.0.0.8              |
+| Web-2       | No                  | 10.0.0.8              |
+| Web-3       | No                  | 10.0.0.8              |
+| Elk-1       | Yes                 | 104.34.75.64/10.0.0.8 |
 
 ### Elk Configuration
 
