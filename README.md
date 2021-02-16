@@ -139,7 +139,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to [ELK public IP]/app/kibana to check that the installation worked as expected.
 
 
-Below is he specific commands the user will need to run to download the playbook, update the files, etc.
+###Below is he specific commands the user will need to run to download the playbook, update the files, etc.
 
 - ssh into Jump-Box VM: ```ssh [username]@[IP_Address]```
 
