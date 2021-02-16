@@ -167,7 +167,7 @@ Create the Playbook and Configure the Container.
 - ```nano pentest.yml```
 
 In the nano text editor add the following so the playbook reads:
----
+```---
 - name: Config Web VM with Docker
   hosts: webservers
   become: true
