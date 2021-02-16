@@ -141,7 +141,10 @@ SSH into the control node and follow the steps below:
 
 Below is he specific commands the user will need to run to download the playbook, update the files, etc.
 
-- ssh into Jump-Box VM: ssh [username]@[IP_Address]
+- ssh into Jump-Box VM: ```ssh [username]@[IP_Address]```
 
 Install, setup and launch docker using the commands below
 - ```sudo apt install docker.io```
+- ```sudo docker pull cyberxsecurity/ansible```
+- ```sudo docker run -ti cyberxsecurity/ansible:latest bash #```
+
