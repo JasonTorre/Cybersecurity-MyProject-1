@@ -146,5 +146,22 @@ Below is he specific commands the user will need to run to download the playbook
 Install, setup and launch docker using the commands below
 - ```sudo apt install docker.io```
 - ```sudo docker pull cyberxsecurity/ansible```
-- ```sudo docker run -ti cyberxsecurity/ansible:latest bash #```
+- ```sudo docker run -ti cyberxsecurity/ansible:latest bash```
+The command will create and start a conatianer. To find the name of your conatainer run the command below.
+- ```sudo docker container list -a```
+
+When you need to restart your conatianer you would use the following command below.
+- ``` sudo docker start (Name) && sudo docker attach (Name)```
+
+You would then need to edit the host files.
+ 1. ```nano /etc/ansible/hosts```
+ 2. Uncomment the [webservers] header
+ 3. Under the webservers header add the internal IP addresses of the web VM's and add the python scripte to the end. The line should look like ```10.0.0.6 ansible_python_interpreter=/usr/bin/python3```
+ 
+Then edit the config files.
+ 1.  ```nano /etc/ansible/ansible.cfg```
+ 2. On line 106, change remote user to ```remote_user = [username]```
+ 
+Create the Playbook and Configure the Container.
+
 
