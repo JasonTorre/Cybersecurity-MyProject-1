@@ -99,6 +99,7 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows admins to automate daily mundane task. This frees them up to focus on more important business or troubleshoot other issues. Also, using Ansible to configure machines reduces errors.
 
 The playbook implements the following tasks:
+
 - Install docker
 - Download image
 - Configure ansible container
@@ -110,6 +111,7 @@ The following screenshot displays the result of running `docker ps` after succes
 ![Docker](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/Docker_PS.PNG)
 
 ### Target Machines & Beats
+
 This ELK server is configured to monitor the following machines:
 - 10.0.0.9
 - 10.0.0.10
@@ -121,6 +123,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat monitors the log files of the choosen system, and forwards them to Elasticsearch or Logstash. The Data can then be viewed and it will represent data such as system log events in a dashboard:
+
 ![Filebeat](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/Filebeats.PNG)
 
 - Metricbeat collects metrics from the operating system and from services running on the server. The metrics and statistics that it collects and is sent to the output that you specify, such as Elasticsearch or Logstash and can be displayed on a dashboard in Kibana, such as below.
@@ -135,7 +138,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles.
-- Update the filebeat-config.yml file to include ELK-1 private IP 10.1.0.5 (Your IP vary) line 1106 and 1806.
+- Update the filebeat-config.yml file to include ELK-1 private IP 10.1.0.5 (Your IP will vary) line 1106 and 1806.
 - Run the playbook, and navigate to [ELK public IP]/app/kibana to check that the installation worked as expected.
 
 
@@ -147,7 +150,7 @@ Install, setup and launch docker using the commands below
 - ```sudo apt install docker.io```
 - ```sudo docker pull cyberxsecurity/ansible```
 - ```sudo docker run -ti cyberxsecurity/ansible:latest bash```
-The command will create and start a conatianer. To find the name of your conatainer run the command below.
+The command will create and start a container. To find the name of your container run the command below.
 - ```sudo docker container list -a```
 
 When starting your conatianer you would use the following command below.
@@ -156,7 +159,7 @@ When starting your conatianer you would use the following command below.
 You would then need to edit the host files.
  1. ```nano /etc/ansible/hosts```
  2. Uncomment the [webservers] header
- 3. Under the webservers header add the internal IP addresses of the web VM's and add the python scripte to the end. The line should look like ```10.0.0.6 ansible_python_interpreter=/usr/bin/python3```
+ 3. Under the webservers header add the internal IP addresses of the web VM's and add the python script to the end. The line should look like ```10.0.0.6 ansible_python_interpreter=/usr/bin/python3```
  
 Then edit the config files.
  1.  ```nano /etc/ansible/ansible.cfg```
@@ -203,5 +206,12 @@ In the nano text editor add the following so the playbook reads:
       name: docker
       enabled: yes
 ```
+Save and exit the file and then run the playbook using the following command.
+
+- ```ansible-playbook /etc/ansible/pentest.yml```
+
+The final results should look similar to below.
+
+![Playbook](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Pictures/Playbook.PNG)
 
 
