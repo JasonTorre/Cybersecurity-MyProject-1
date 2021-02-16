@@ -55,7 +55,7 @@ Machines within the network can only be accessed by through the DVWA container i
 A summary of the access policies in place can be found in the table below.
 
 | Name        | Publicly Accessible | Allowed IP Addresses  |
-|---------- --|---------------------|-----------------------|
+|-------------|---------------------|-----------------------|
 | Jump-Box VM | Yes                 | 104.34.75.64          |
 | Web-1       | No                  | 10.0.0.8              |
 | Web-2       | No                  | 10.0.0.8              |
