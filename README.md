@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Elk](https://github.com/JasonTorre/Cybersecurity-MyProject-1/blob/main/Diagrams/Elk%20Stack%20Diagram.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure clould envirment file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Azure cloud environment file may be used to install only certain pieces of it, such as Filebeat.
 
  ```
  ---
